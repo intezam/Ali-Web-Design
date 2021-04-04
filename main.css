@@ -1,0 +1,622 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Texturina', serif;
+    scroll-behavior: smooth;
+}
+
+
+
+.section-head{
+    padding: 80px;
+    color: #000;
+}
+.section-head span{
+    color: crimson;
+}
+@media(max-width:988px){
+    .section-head{
+        font-size: 35px!important;
+    }
+    .section-head{
+    padding: 80px;
+    color: #000;
+    }
+}
+
+
+.scrollTop{
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    background-color: crimson;
+    border-radius: 50%;
+    bottom: 35px;
+    right: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.4s;
+    z-index: 100;
+}
+.scrollTop.active{
+    bottom: 35px;
+    pointer-events: auto;
+    opacity: 1;
+}
+
+
+
+/*********************************************HEADER**************************************************/
+#header{
+    width: 100%;
+    height: auto;
+}
+#header .navbar-brand{
+    margin-left: 50px;
+    color: #fff;
+    padding: 20px 20px 0 20px;
+    font-size: 20px;
+    text-transform: uppercase;
+    display: flex;
+}
+.logo-text{
+    margin-left: 10px;
+    margin-top: -10px;
+}
+.logo-text h2{
+    color: crimson;
+    font-size: 50px;
+}
+.logo-text h2{
+    font-size: 40px;
+}
+#header .navbar-brand img{
+    width: 95px;
+    height: 80px;
+}
+#header .navbar{
+    margin-right: 50px;
+}
+#header .navbar li a{
+    color: #fff;
+    padding: 0px;
+    margin: 20px;
+    font-size: 20px;
+    text-transform: uppercase;
+    position: relative;
+}
+#header .navbar li a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: crimson;
+    left: 0;
+    bottom: -6px;
+    transform: scale(0);
+    transition: 0.3s linear;
+}
+#header .navbar li a:hover::after{
+    transform: scale(1);
+}
+#header .navbar-toggler-icon .fa{
+    font-size: 28px;
+    color: #fff;
+}
+/*********MEDIA-QUERIES*********/
+@media(max-width:988px){
+    #header .navbar{
+    margin-right: 10px!important;
+    }
+    #header .navbar li a{
+    text-align: center!important;
+    }
+    #header .navbar-brand{
+    margin-left: -20px;
+    }
+    .logo-text h2{
+    color: crimson;
+    font-size: 30px;
+    }
+    .logo-text h3{
+    font-size: 20px;
+    }
+    #header .navbar-brand img{
+    width: 65px;
+    height: 65px;
+    }
+}
+/*********************************************HEADER**************************************************/
+
+
+
+/*********************************************BANNER**************************************************/
+.bg{
+    background-image: url(Images/Banner/Banner1.png);
+}
+#banner{
+    width: 100%;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*background-color: #111;*/
+    
+}
+#banner h1{
+    display: block;
+    font-size: 4rem;
+    position: relative;
+    color: #fff;
+}
+#banner h1:nth-child(3){
+    color: crimson;
+    font-size: 4.5rem;
+}
+#banner .btn{
+    display: inline-block;
+    padding: 10px 30px;
+    color: #fff;
+    background-color: transparent;
+    border: 2px solid crimson;
+    font-size: 1.6rem;
+    letter-spacing: 0.1rem;
+    margin-top: 30px;
+    transition: 0.3s ease;
+    
+}
+#banner .btn:hover{
+    color: #fff;
+    background-color: crimson;
+}
+@media(max-width:988px){
+    #banner{
+    background-image: url(Images/Banner/Banner.png);
+    background-position: top;
+    }
+    #banner h1{
+        font-size: 28px;
+    }
+    #banner .btn{
+        font-size: 18px;
+        padding: 5px 15px;
+        margin-top: 15px;
+    }
+    #banner h1:nth-child(3){
+    font-size: 48px;
+    }
+}
+/*********************************************BANNER**************************************************/
+
+
+
+
+
+
+
+/*********************************************ABOUT**************************************************/
+#about{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(#111 5%, white 70%);
+    overflow: hidden;
+}
+#about .Pbox{
+    width: 350px;
+    height: 370px;
+    background-color: #111;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #111;
+}
+#about .Tbox{
+    padding: 10px;
+}
+#about .Tbox p{
+    line-height: 30px;
+    font-size: 16px;
+}
+#about .Tbox .btn{
+    display: inline-block;
+    padding: 10px 30px;
+    color: #000;
+    background-color: transparent;
+    border: 2px solid crimson;
+    font-size: 1.6rem;
+    letter-spacing: 0.1rem;
+    margin-top: 30px;
+    transition: 0.3s ease;
+    
+}
+#about .Tbox .btn:hover{
+    color: #fff;
+    background-color: crimson;
+}
+@media(max-width:988px){
+    #about{
+        height: auto;
+    }
+    #about .Tbox .btn{
+        font-size: 1rem;
+        margin-left: 10%;
+        
+    }
+    #about .Tbox p{
+        text-align: justify;
+        margin-top: 50px;
+    }
+    #about .Pbox{
+    width: 330px;
+    height: 350px;
+    background-color: #111;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #111;
+    }
+}
+/*********************************************ABOUT**************************************************/
+
+
+
+
+/*********************************************SERVICES**************************************************/
+#services{
+    width: 100%;
+    height: 100vh;
+}
+#services .box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 400px;
+    margin-bottom: 20px;
+    transition: 0.5s;
+    border-radius: 10px;
+    transform: scale(0.9);
+}
+#services .box:hover{
+    transform: scale(1);
+    box-shadow: 2px 2px 10px crimson;
+}
+#services .box h2{
+    margin: 40px 0;
+    padding: 5px;
+    font-size: 28px;
+}
+#services .box p{
+    padding: 5px;
+}
+#services .icon img{
+    width: 80px;
+}
+
+@media(max-width:988px){
+    #services{
+        height: auto;
+    }
+}
+/*********************************************SERVICES**************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+/*********************************************OFFER**************************************************/
+#service{
+    overflow: hidden;
+}
+#service .names h1{
+    font-size: 30px;
+}
+.progress{
+    width: 80%;
+} 
+@media(max-width:988px){
+    .progress{
+    width: 100%;
+    }
+    .names:nth-child(4){
+        margin-bottom: 60px!important;
+    }
+    .offers{
+        margin-top: -50px;
+    }
+    #service{
+        padding: 10px;
+    }
+    .offer-head{
+        padding: 80px 0;
+        font-size: 30px!important;
+    }
+}
+
+/*********************************************OFFER**************************************************/
+
+
+
+
+
+
+
+
+
+
+/*********************************************PROJECTS**************************************************/
+#projects{
+    width: 100%;
+    height: auto;
+}
+#projects img{
+    box-shadow: 2px 2px 15px #000;
+}
+@media(max-width:988px){
+    #projects img{
+    margin-bottom: 40px;
+    }
+    #projects{
+    padding: 10px;
+}
+}
+/*********************************************PROJECTS**************************************************/
+
+
+
+
+
+
+
+
+
+
+
+/*********************************************FOLLOW**************************************************/
+#follow{
+    width: 100%;
+    height: auto;
+    margin-bottom: 80px;
+}
+.social-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.social-icon img{
+    width: 70px;
+}
+.s-icon{
+    display: flex;
+    justify-content: center;
+}
+.s-icon img{
+    width: 350px;
+    height: auto;
+    cursor: pointer;
+    transform: scale(1);
+    transition: 0.3s;
+}
+.s-icon img:hover{
+    transform: scale(1.1);
+}
+@media(max-width:988px){
+    .follow-head{
+        padding: 80px 20px;
+        font-size: 30px!important;
+    }
+    .s-icon img{
+    width: 280px;
+    }
+}
+/*********************************************FOLLOW**************************************************/
+
+
+
+
+
+
+
+/*********************************************CONTACT**************************************************/
+/*CONTACT FORM*/
+.contact{
+    color: #fff;
+}
+#contact{
+    background-image: linear-gradient(45deg, crimson, #111);
+}
+.contactForm{
+    padding: 70px 50px;
+}
+.contactForm h2{
+    color: #fff;
+    font-size: 30px;
+    font-weight: 500;
+    margin-top: -100px;
+}
+.contactForm .formBox{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 30px;
+}
+.contactForm .formBox .inputBox{
+    position: relative;
+    margin: 0 0 40px 0;
+}
+.contactForm .formBox .inputBox.w50{
+    width: 100%;
+}
+.contactForm .formBox .inputBox.w100{
+    width: 100%;
+}
+.contactForm .formBox .inputBox input,
+.contactForm .formBox .inputBox textarea
+{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 18px;
+    font-weight: 300;
+    color: #fff;
+    border: none;
+    border-bottom: 1px solid #111;
+    border-radius: 0px;
+    background: transparent;
+    resize: none;
+    
+}
+::placeholder{
+    color: gainsboro!important;
+}
+.contactForm .formBox .inputBox input[type="submit"]{
+    position: relative;
+    cursor: pointer;
+    background: crimson;
+    color: #fff;
+    border: 1px solid #111;
+    border-radius: 8px;
+    max-width: 150px;
+    padding: 8px;
+}
+.contactForm .formBox .inputBox input[type="submit"]:hover{
+    background: #111;
+}
+@media(max-width:988px){
+    .contactForm h2{
+    margin-bottom: 20px;
+    }
+    .contact{
+        padding: 80px 0;
+    }
+
+}
+/*CONTACT FORM*/
+
+
+
+
+
+/*CONTACT INFO*/
+#contact .square{
+    margin-top: 20px;
+    cursor: pointer;
+    color: #fff;
+}
+#contact .square .icon{
+    margin-bottom: 10px;
+}
+#contact .square .icon img{
+    transition: 0.4s;
+}
+.square:hover .icon img{
+    transform: rotate(360deg);
+}
+#contact .square h3{
+    font-size: 1.8em;
+    cursor: text;
+}
+#contact .square p{
+    font-size: 18px;
+    cursor: text;
+}
+@media(max-width:988px){
+    #contact .square{
+        margin-bottom: 20px;
+    }
+}
+/*CONTACT INFO*/
+/*********************************************CONTACT**************************************************/
+
+
+
+
+
+/*********************************************FOOTER**************************************************/
+#footer{
+    display: flex;
+    flex-direction: column;
+    background-color: #111;
+}
+.left-sec{
+    display: flex;
+    align-items: center;
+}
+.left-sec .f-logo p{
+    padding: 20px;
+    font-size: 2rem;
+    color: #fff;
+}
+.f-logo img{
+    width: 95px;
+    height: 80px;
+}
+.left-sec p{
+    padding: 20px;
+    color: #fff;
+}
+.right-sec{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+.payment-text {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #fff;
+}
+.payment-text span{
+    color: crimson;
+}
+.payment-type img{
+    width: 200px;
+}
+/*********************************************FOOTER**************************************************/
+
+
+
+
+
+
+
+
+/*********************************************COPYRIGHT**************************************************/
+#copyright{
+    width: 100%;
+    height: 25px;
+    background-color: #111;
+}
+#copyright h4{
+    text-align: center;
+font-size: 13px;
+color: darkgray;
+}
+#copyright h4 span{
+    color: crimson;
+}
+
+/*********************************************COPYRIGHT**************************************************/
+
+
+
+
+
+
+
+
+
+
+
